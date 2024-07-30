@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scanner = new Scanner(System.in);
+		ArrayList<Integer> list = new ArrayList<>();
+		int n = scanner.nextInt();
+		int[] arr = new int[n];
+		for(int k=0;k<n;k++){
+		    System.out.print("Enter "+(k+1));
+		    arr[k] = scanner.nextInt();
+		}
+		for(int i=0;i<n;i++){
+		    boolean x=false;
+		    for(int j=0;j<i;j++){
+		        if(arr[i]==arr[j]){
+		            x=true;
+		            break;
+		    }
+		    }
+		    if(!x){
+		        list.add(arr[i]);
+		    }
+		    
+		}
+		System.out.println(list);
+	}
+}
