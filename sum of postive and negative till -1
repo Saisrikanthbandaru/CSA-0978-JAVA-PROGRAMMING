@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter -1 to exit.");
+		ArrayList<Integer> list = new ArrayList<>();
+		int n;
+		for(int k=0;k<=100;k++){
+		    n = scanner.nextInt();
+		if(n!=-1){
+		    list.add(n);
+		}
+		if(n==-1){
+		    break;
+		}
+		}
+		int pos=0;
+		int neg=0;
+		for(int i : list){
+		    if (i>0){
+		        pos=pos+i;
+		    }
+		     if (i<0){
+		        neg=neg+i;
+		    }
+		}
+		System.out.println("Postive Sum: "+pos);
+		System.out.println("Negative Sum: "+neg);
+	}
+}
